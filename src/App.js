@@ -1,42 +1,29 @@
 import './App.css';
-import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { BsMedium, BsGithub } from 'react-icons/bs'
 import { SiGmail } from 'react-icons/si'
+import { portfolios } from './portfolioDb';
+import MyNavbar from './component/Navbar';
 
 function App() {
+  const navigate = useNavigate()
   return (
     <div className="App">
-      <Navbar fixed="top" bg="light" data-bs-theme="light">
-        <Container>
-          <Link to='/'>
-            <div className='logo-wrap'>
-              <img src='/logo.png' alt='logo'/>
-            </div>
-          </Link>
-          <Nav className="ms-3 me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Portfolio</Nav.Link>
-          </Nav>
-          <Button variant="primary">Resume</Button>
-        </Container>
-      </Navbar>
-
+      <MyNavbar />
       <section className='banner'>
         <Container>
           <Row className='justify-content-center text-center'>
             <Col lg={6}>
               <h1>
-                哈囉, 我是薛少康 <br/>
+                哈囉, 我叫薛少康 <br/>
                 是一名前端工程師
               </h1>
-              <Button className='mt-3' variant="primary">About me</Button>
+              {/* <Button className='mt-3' variant="primary">About me</Button> */}
             </Col>
           </Row>
         </Container>
@@ -45,46 +32,28 @@ function App() {
         <Container>
           <h2 className='mb-3'>我的作品</h2>
           <Row>
-            <Col md={6} lg={4}>
-              <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="https://picsum.photos/100/80" />
-                <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
-                  </Card.Text>
-                  <Link className='stretched-link' to='/about' target='_blank' />
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={6} lg={4}>
-              <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="https://picsum.photos/100/80" />
-                <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
-                  </Card.Text>
-                  <Button variant="primary">Go somewhere</Button>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={6} lg={4}>
-              <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="https://picsum.photos/100/80" />
-                <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
-                  </Card.Text>
-                  <Button variant="primary">Go somewhere</Button>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Button className='mt-3' variant="primary">查看所有</Button>
+            {portfolios.map((portfolio, index) => {
+              if (index < 3) {
+                return(
+                  <Col md={6} lg={4} key={portfolio.name + index}>
+                    <Card className='portfolio-card'>
+                      <Card.Img className='card-img' variant="top" src={portfolio.imageSrc} />
+                      <Card.Body>
+                        <Card.Title>{portfolio.name}</Card.Title>
+                        <Card.Text>
+                          Some quick example text to build on the card title and make up the
+                          bulk of the card's content.
+                        </Card.Text>
+                        <a className='stretched-link' href={portfolio.url} target='_blank' rel='noreferrer'> </a>
+                      </Card.Body>
+                    </Card>
+                </Col>
+                )
+              } 
+              return false
+            }
+            )}
+            <Button className='mt-3' variant="primary" onClick={() => {navigate('/portfolios')}}>查看所有</Button>
           </Row>
         </Container>
       </section>

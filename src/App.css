@@ -1,11 +1,18 @@
-.logo-wrap {
-  width: 30px;
-}
-
 .banner {
   background-color: #ececec;
   margin-top: 56px;
   padding: 3rem 0;
+}
+
+.portfolio-card {
+  margin-top: 1rem;
+}
+
+.card-img {
+  height: 230px;
+  object-fit: cover;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .about {

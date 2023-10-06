@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
+import Portfolio from './Portfolio';
 import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
   },
+  {
+    path: '/portfolios',
+    element: <Portfolio />,
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

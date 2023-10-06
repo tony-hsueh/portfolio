@@ -1,0 +1,11 @@
+.navbar {
+  font-weight: 600;
+}
+
+.nav-link.custom-active {
+  color: #f16464;
+}
+
+.logo-wrap {
+  width: 30px;
+}
