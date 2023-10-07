@@ -4,11 +4,10 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import { BsMedium, BsGithub } from 'react-icons/bs'
-import { SiGmail } from 'react-icons/si'
 import { portfolios } from './portfolioDb';
 import MyNavbar from './component/Navbar';
+import MyCard from './component/Card';
+import Footer from './component/Footer';
 
 function App() {
   const navigate = useNavigate()
@@ -30,30 +29,22 @@ function App() {
       </section>
       <section className='portfolio py-5'>
         <Container>
-          <h2 className='mb-3'>我的作品</h2>
+          <h2 className='mb-3'>近期作品</h2>
           <Row>
             {portfolios.map((portfolio, index) => {
               if (index < 3) {
                 return(
                   <Col md={6} lg={4} key={portfolio.name + index}>
-                    <Card className='portfolio-card'>
-                      <Card.Img className='card-img' variant="top" src={portfolio.imageSrc} />
-                      <Card.Body>
-                        <Card.Title>{portfolio.name}</Card.Title>
-                        <Card.Text>
-                          Some quick example text to build on the card title and make up the
-                          bulk of the card's content.
-                        </Card.Text>
-                        <a className='stretched-link' href={portfolio.url} target='_blank' rel='noreferrer'> </a>
-                      </Card.Body>
-                    </Card>
+                    <MyCard portfolio={portfolio}/>
                 </Col>
                 )
               } 
               return false
             }
             )}
-            <Button className='mt-3' variant="primary" onClick={() => {navigate('/portfolios')}}>查看所有</Button>
+            <Col>
+              <Button className='mt-3 w-100' variant="primary" onClick={() => {navigate('/portfolios')}}>查看所有</Button>
+            </Col>
           </Row>
         </Container>
       </section>
@@ -93,45 +84,7 @@ function App() {
         <div className='deco'></div>
         <div className='deco1'></div>
       </section>
-      <footer>
-        <Container>
-          <Row className='justify-content-center'>
-            <Col>
-              <div className='logo--footer'>
-                <img src='/logo.png' alt='logo'/>
-              </div>
-              <h4 className='footer-desc'>如果您喜歡我的作品，可透過下方聯絡資訊聯繫我</h4>    
-              <div className='gap-line'></div>
-              <div className='social-link-wrap'>
-                <a 
-                  href='https://medium.com/@yahooleo36'
-                  target='_blank'
-                  className='social-link'
-                  rel='noreferrer'
-                >
-                 <BsMedium  />
-                </a>
-                <a 
-                  href='mailto: yahooleo36@gmail.com'
-                  target='_blank'
-                  className='social-link'
-                  rel='noreferrer'
-                >
-                  <SiGmail />     
-                </a>
-                <a 
-                  href='https://github.com/tony-hsueh'
-                  target='_blank'
-                  className='social-link'
-                  rel='noreferrer'
-                >
-                  <BsGithub />    
-                </a>           
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </footer>
+      <Footer />
     </div>
   );
 }

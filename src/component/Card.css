@@ -1,0 +1,18 @@
+.portfolio-card {
+  margin-top: 1rem;
+  border: none;
+  box-shadow: 0 0 12px 0 #00000038;
+  transition: .25s ease-out;
+}
+
+.portfolio-card:hover {
+  box-shadow: 5px 5px 12px 0 #00000038;
+  transform: translateY(-8px);
+}
+
+.card-img {
+  height: 230px;
+  object-fit: cover;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}

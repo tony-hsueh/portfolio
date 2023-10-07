@@ -4,17 +4,6 @@
   padding: 3rem 0;
 }
 
-.portfolio-card {
-  margin-top: 1rem;
-}
-
-.card-img {
-  height: 230px;
-  object-fit: cover;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
 .about {
   position: relative;
   background-color: #ececec;

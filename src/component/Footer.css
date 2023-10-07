@@ -1,0 +1,46 @@
+.logo--footer {
+  width: 60px;
+  margin: 0 auto;
+}
+
+.logo--footer img,
+.logo-wrap img {
+  width: 100%;
+  height: auto;
+}
+
+.gap-line {
+  background: linear-gradient(to right, transparent, rgb(195, 5, 5), transparent);
+  height: 2px;
+  margin: 1rem 0;
+}
+
+.social-link-wrap {
+  text-align: center;
+}
+
+.social-link {
+  font-size: 2rem;
+  transition: .25s ease;
+  color: gray;
+  margin-right: 1rem;
+}
+
+.social-link:last-child {
+  margin-right: 0;
+}
+
+.social-link:hover {
+  color: white;
+}
+
+footer {
+  padding: 3rem 0;
+  background-color: #222020;
+}
+
+.footer-desc {
+  margin-top: .5rem;
+  text-align: center;
+  color: white;
+}
