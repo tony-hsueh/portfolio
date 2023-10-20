@@ -15,7 +15,7 @@ export const portfolios = [
   },
   {
     name: '大家來找碴',
-    type: portfoliotype['tool'],
+    type: portfoliotype['game'],
     imageSrc: '/img/spot-difference.png',
     url: 'https://tony-hsueh.github.io/spot-difference/',
   },
