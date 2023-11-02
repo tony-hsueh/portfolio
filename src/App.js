@@ -15,14 +15,13 @@ function App() {
     <div className="App">
       <MyNavbar />
       <section className='banner'>
-        <Container>
-          <Row className='justify-content-center text-center'>
-            <Col lg={6}>
-              <h1>
+        <Container className='h-100'>
+          <Row className='text-center h-100'>
+            <Col lg={6} className='py-5 d-flex justify-content-center align-items-center'>
+              <h1 className='introduction'>
                 哈囉, 我叫薛少康 <br/>
                 是一名前端工程師
               </h1>
-              {/* <Button className='mt-3' variant="primary">About me</Button> */}
             </Col>
           </Row>
         </Container>

@@ -1,7 +1,15 @@
 .banner {
-  background-color: #ececec;
+  background-image: url('/public/img/banner.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   margin-top: 56px;
-  padding: 3rem 0;
+  height: 600px;
+}
+
+.introduction {
+  color: white;
+  text-shadow: #FC0 1px 0 5px, #FC0 0 0 8px, #FC0 0 0 10px;
 }
 
 .about {
@@ -138,6 +146,10 @@ footer {
 }
 
 @media (max-width: 769px) {
+  .banner {
+    height: 200px;
+  }
+
   .deco{
     width: 200px;
     height: 200px;
