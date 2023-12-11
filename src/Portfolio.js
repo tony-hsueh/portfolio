@@ -15,9 +15,9 @@ const Portfolio = () => {
     setFilter(portfoliotype[type]);
   }
   return (
-    <div className='portfolio'>
+    <div className='portfolio-page'>
       <MyNavbar />
-      <section className='banner'>
+      <section className='py-5'>
         <Container>
             <h2 className='mb-3'>我的作品</h2>
             <div className='d-flex'>

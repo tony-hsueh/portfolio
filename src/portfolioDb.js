@@ -2,6 +2,18 @@ import { portfoliotype } from "./commonParameter";
 
 export const portfolios = [
   {
+    name: '選舉開票網站（參賽作品）',
+    type: portfoliotype['tool'],
+    imageSrc: '/img/f2e-2.png',
+    url: 'https://tony-f2e2023-2.netlify.app/',
+  },
+  {
+    name: '立委行銷網站（參賽作品）',
+    type: portfoliotype['layout'],
+    imageSrc: '/img/f2e-1.png',
+    url: 'https://tony-f2e.netlify.app/',
+  },
+  {
     name: '聊天室',
     type: portfoliotype['tool'],
     imageSrc: '/img/chatroom.png',

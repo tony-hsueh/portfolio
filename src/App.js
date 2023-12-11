@@ -31,7 +31,7 @@ function App() {
           <h2 className='mb-3'>近期作品</h2>
           <Row>
             {portfolios.map((portfolio, index) => {
-              if (index < 3) {
+              if (index < 6) {
                 return(
                   <Col md={6} lg={4} key={portfolio.name + index}>
                     <MyCard portfolio={portfolio}/>
