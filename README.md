@@ -39,7 +39,7 @@ npm start
 ```
 
 ## Built With
-- React v8.2.0
+- React v18.2.0
 - React-bootstrap v2.8.0
 - React-icons v4.11.0
 - React-router-dom v6.16.0
