@@ -14,19 +14,18 @@ function App() {
   return (
     <div className="App">
       <MyNavbar />
-      <section className='banner'>
-        <Container className='h-100'>
-          <Row className='text-center h-100'>
-            <Col lg={6} className='py-5 d-flex justify-content-center align-items-center'>
-              <h1 className='introduction'>
-                哈囉, 我叫薛少康 <br/>
-                是一名前端工程師
-              </h1>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-      <section className='portfolio py-5'>
+      <Container className='intro'>
+        <Row className='justify-content-center'>
+          <Col className='my-5'>
+            <h1 className='job-title'>Front-end Engineer</h1>
+            <p className='name'>
+              Tony Hsueh
+            </p>
+            <p className='brief'>A front-end developer who loves to create,explore,bring ideas to reality</p>
+          </Col>
+        </Row>
+      </Container>
+      <section className='portfolio pb-5'>
         <Container>
           <h2 className='mb-3'>近期作品</h2>
           <Row>

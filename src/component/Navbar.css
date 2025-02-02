@@ -1,5 +1,6 @@
 .navbar {
   font-weight: 600;
+  height: 80px;
 }
 
 .nav-link.custom-active {
